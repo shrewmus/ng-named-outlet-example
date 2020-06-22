@@ -1,0 +1,14 @@
+<h1>Example of named outlet</h1>
+<div>
+  <a [routerLink]="[{ outlets: { primary: ['products'],sidebar: ['products'] } }]">
+  Products
+  </a>
+</div>
+<div>
+  <div style="float:right; border: solid 1px red">
+    <router-outlet></router-outlet>
+  </div>
+  <div style="float:left; border: solid 1px green">
+    <router-outlet name="sidebar"></router-outlet>
+  </div>
+</div>
